@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-let vkWrap  = require('./wrap.js'), 
+let vkWrap  = require('./wrapper.js'), 
   vkBot   = new vkWrap('login', 'password');
 
 vkBot.authBot();
