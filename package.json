@@ -1,0 +1,33 @@
+{
+  "name": "vkbot",
+  "version": "0.0.1",
+  "description": "vkBot written in javascript and nodejs",
+  "main": "wrapper.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlix1/vkBot.git"
+  },
+  "keywords": [
+    "vkbot",
+    "bot",
+    "nodejs",
+    "вкбот",
+    "бот"
+  ],
+  "author": "devlix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devlix1/vkBot/issues"
+  },
+  "homepage": "https://github.com/devlix1/vkBot#readme",
+  "dependencies": {
+    "request": "^2.69.0"
+  },
+  "devDependencies": {}
+}
