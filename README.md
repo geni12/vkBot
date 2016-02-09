@@ -1,6 +1,8 @@
 # vkBot
 ###### Бот для сайта vk.com, написанный на javascript с использованием nodejs
 
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/0fc1cbc42b9b4de39e7317ad4fed21a7)](https://www.codacy.com/app/artur-irinatov/vkBot)
+
 ## Как использовать
 1. Включить wrapper.js в ваш файл
 ```javascript
