@@ -4,9 +4,9 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/0fc1cbc42b9b4de39e7317ad4fed21a7)](https://www.codacy.com/app/artur-irinatov/vkBot)
 
 ## Как использовать
-1. Включить wrapper.js в ваш файл
+1. npm install vkbot
 ```javascript
-let vkWrap = require('./wrapper.js')
+let vkWrap = require('vkBot')
 ```
 2. Создать объект vkWrap, указав логин и пароль от аккаунта
 ```javascript
