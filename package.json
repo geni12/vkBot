@@ -1,6 +1,6 @@
 {
   "name": "vkbot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vkBot written in javascript and nodejs",
   "main": "wrapper.js",
   "directories": {
