@@ -1,7 +1,8 @@
 ﻿'use strict';
 
-let vkWrap  = require('./wrapper.js'), 
-  vkBot   = new vkWrap('login', 'password');
+let vkWrap  = require('vkBot'), 
+  vkBot   = new vkWrap('login', 'password'),
+  request = require('request');
 
 vkBot.authBot();
 
@@ -15,6 +16,17 @@ vkBot.setWord({
   'пока': {
     1: 'Пока'
   }
+});
+
+vkBot.setChangeStatus(true, () => {
+  setInterval(() => {
+    vkBot.changeStatus(
+      `&#127808; vkBot by devlix &#127808;
+       &#128233; Сообщений - скоро будет &#128233;
+       &#128373; Обращений к боту -  ${vkBot.reqBot} &#128373;
+      `
+    );
+  }, 30000);
 });
 
 vkBot.addCommand('помощь', () => {
@@ -64,4 +76,35 @@ vkBot.addCommand('когда', () => {
     attachMessage: true, 
     limitWord: 20
   });
-})
+});
+
+vkBot.addCommand('музыка', () => {
+  request({
+      url: 'https://api.vk.com/method/audio.search',
+      method: 'GET',
+      qs: {
+        access_token: vkBot.token,
+        q: vkBot.fullMsg,
+        count: 7
+      }
+    }, (error, response, body) => {
+      try {
+        let data = vkBot.parseJSON(body).response, result = {}, message;
+        if(data[0] != 0) {
+          for(let key in data) {
+            result[key] = `audio${data[key]['owner_id']}_${data[key]['aid']}`;
+          }
+          delete result[0];
+        } else {
+          result = false, message = 'Не найдено';
+        }
+        vkBot.sendMessage(message, {
+          attachMessage: true, 
+          limitWord: 20,
+          attach: result
+        });
+      } catch(e) {
+        
+      }
+    });
+});
