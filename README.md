@@ -1,5 +1,6 @@
 # vkBot
 ###### Бот для сайта vk.com, написанный на javascript с использованием nodejs
+###### Проверить бота можно на страничке https://vk.com/id294418496
 
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/0fc1cbc42b9b4de39e7317ad4fed21a7)](https://www.codacy.com/app/artur-irinatov/vkBot)
 
